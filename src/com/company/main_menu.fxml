@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.Main">
+    <children>
+        <Pane prefHeight="393.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="399.0" fitWidth="607.0" layoutX="-100.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" x="100.0">
+                    <image>
+                        <Image url="@1221.png" />
+                    </image>
+                    <effect>
+                        <Glow level="0.0" />
+                    </effect>
+                </ImageView>
+            </children>
+        </Pane>
+        <AnchorPane prefHeight="393.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane accessibleRole="IMAGE_VIEW" layoutX="326.0" layoutY="-6.0" prefHeight="399.0" prefWidth="233.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="326.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-6.0">
+                    <children>
+                        <VBox layoutX="13.0" layoutY="48.0" prefHeight="298.0" prefWidth="261.0">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color red="0.01315789483487606" green="0.012731481343507767" blue="0.012731481343507767" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <children>
+                                <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="168.0" prefWidth="242.0" text="TOWER OF HANOI" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="Javanese Text" size="26.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </AnchorPane>
+                <AnchorPane layoutY="6.0" prefHeight="393.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <VBox prefHeight="71.0" prefWidth="306.0" />
+                        <Button fx:id="play_btn" cache="true" contentDisplay="CENTER" layoutX="28.0" layoutY="220.0" mnemonicParsing="false" onAction="#startGameHandler" prefHeight="30.0" prefWidth="215.0" style="-fx-background-color: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #000000, #0e0204, #170308, #1e050a, #2b080d, #39060c, #480308, #550000);;" text=" NEW GAME" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="fastFoward_btn" cache="true" contentDisplay="CENTER" layoutX="28.0" layoutY="256.0" mnemonicParsing="false" onAction="#solveHandler" prefHeight="30.0" prefWidth="215.0" style="-fx-background-color: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #000000, #0e0204, #170308, #1e050a, #2b080d, #39060c, #480308, #550000);;" text="PLAY AUTOMATICALLY" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="highScore_btn" cache="true" contentDisplay="CENTER" layoutX="28.0" layoutY="340.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="30.0" prefWidth="215.0" style="-fx-background-color: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #000000, #0e0204, #170308, #1e050a, #2b080d, #39060c, #480308, #550000);;" text="EXIT" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <VBox layoutX="30.0" layoutY="7.0" prefHeight="201.0" prefWidth="261.0" AnchorPane.leftAnchor="30.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="286.0" text="MAIN MENU">
+                                    <font>
+                                        <Font name="Arial Black" size="19.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="username" alignment="CENTER" prefHeight="30.0" prefWidth="254.0" promptText="Username">
+                                    <VBox.margin>
+                                        <Insets bottom="15.0" left="40.0" right="38.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="286.0" text="SELECT LEVEL">
+                                    <font>
+                                        <Font name="Arial Black" size="19.0" />
+                                    </font>
+                                </Label>
+                                <CheckBox fx:id="novice_btn" mnemonicParsing="false" onAction="#noviceButtonAction" prefHeight="26.0" prefWidth="138.0" text="NOVICE">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </CheckBox>
+                                <CheckBox fx:id="intermediate_btn" layoutX="10.0" layoutY="111.0" mnemonicParsing="false" onAction="#intermediateButtonAction" prefHeight="26.0" prefWidth="138.0" text="INTERMEDIATE">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </CheckBox>
+                                <CheckBox fx:id="expert_btn" layoutX="10.0" layoutY="137.0" mnemonicParsing="false" onAction="#expertButtonAction" prefHeight="26.0" prefWidth="138.0" text="EXPERT">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </CheckBox>
+                            </children>
+                        </VBox>
+                  <Button fx:id="high_scores_button" cache="true" contentDisplay="CENTER" layoutX="28.0" layoutY="293.0" mnemonicParsing="false" onAction="#highScoreHandler" prefHeight="30.0" prefWidth="215.0" style="-fx-background-color: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #000000, #0e0204, #170308, #1e050a, #2b080d, #39060c, #480308, #550000);;" text="HIGH SCORE" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

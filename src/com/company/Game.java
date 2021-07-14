@@ -12,12 +12,14 @@ public class Game implements ActionListener{
 
     private final JMenuItem new_game = new JMenuItem("Select Disks");
     private final JMenuItem exit = new JMenuItem("Exit");
+//    private String v= "New Game - "+"Username";
+    private final JMenu game;
+    private final JLabel name = new JLabel();
 
-
-    private final JMenu game = new JMenu("New Game");
-
-    public Game(String title) {
+    public Game(String title,String username) {
+        game = new JMenu("New Game - "+username);
         f.setTitle(title);
+
         build();
     }
 

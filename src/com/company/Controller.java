@@ -1,10 +1,5 @@
 package com.company;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
@@ -71,5 +66,4 @@ public class Controller
     public void submit(ActionEvent event)
     {
     }
-
 }

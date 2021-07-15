@@ -15,23 +15,6 @@ public class HighScores extends JPanel {
         jFrame.setVisible(true);
     }
 }
-class Score  implements Serializable {
-    private int score;
-    private String name;
-
-    public int getScore() {
-        return score;
-    }
-
-    public String getNaam() {
-        return name;
-    }
-
-    public Score(String naam, int score) {
-        this.score = score;
-        this.name = naam;
-    }
-}
 class ScoreComparator implements Comparator<Score> {
     public int compare(Score score1, Score score2) {
 
@@ -129,7 +112,7 @@ class HighscoreManager {
             x = max;
         }
         while (i < x) {
-            highscoreString += (i + 1) + ".\t" + scores.get(i).getNaam() + "\t\t" + scores.get(i).getScore() + "\n";
+            highscoreString += (i + 1) + ".\t" + scores.get(i).getName() + "\t\t" + scores.get(i).getScore() + "\n";
             i++;
         }
         return highscoreString;

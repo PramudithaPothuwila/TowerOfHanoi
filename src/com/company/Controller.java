@@ -12,7 +12,7 @@ public class Controller
     public void startGameHandler(ActionEvent event) {
         SwingUtilities.invokeLater(
                 () -> {
-                    Game game = new Game("Tower Of Hanoi - Kanishka Hewageegana");
+                    Game game = new Game("Tower Of Hanoi - Kanishka Hewageegana",username.getText());
                     Game.t = new Tower();
                     Game.f.getContentPane().add(Game.t);
                 });

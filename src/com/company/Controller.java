@@ -1,13 +1,18 @@
 package com.company;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 
 import javax.swing.*;
 
 public class Controller
 {
     public TextField username;
+    public RadioButton novice;
+    public RadioButton intermediate;
+    public RadioButton expert;
 
     public void startGameHandler(ActionEvent event) {
         SwingUtilities.invokeLater(
@@ -18,8 +23,10 @@ public class Controller
                 });
     }
 
-    public void solveHandler(ActionEvent event) {
-        SwingUtilities.invokeLater(() -> {
+    public void solveHandler(ActionEvent event)
+    {
+        SwingUtilities.invokeLater(() ->
+        {
             try {
                 Solution.solve();
             } catch (InterruptedException e) {
@@ -51,19 +58,13 @@ public class Controller
 
     }
 
-    public void noviceButtonAction(ActionEvent event) {
-        System.out.println("Novice CheckBox Button is pressed");
-    }
-
-    public void intermediateButtonAction(ActionEvent event) {
-        System.out.println("Intermediate CheckBox Button is pressed");
-    }
-
-    public void expertButtonAction(ActionEvent event) {
-        System.out.println("Expert CheckBox Button is pressed");
-    }
-
-    public void submit(ActionEvent event)
+    public void setToggleGroup()
     {
+        ToggleGroup difficulty = new ToggleGroup();
+        novice.setToggleGroup(difficulty);
+        intermediate.setToggleGroup(difficulty);
+        expert.setToggleGroup(difficulty);
+        novice.setSelected(true);
     }
+
 }

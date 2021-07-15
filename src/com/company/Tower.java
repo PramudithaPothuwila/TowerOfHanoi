@@ -17,9 +17,9 @@ public class Tower extends JPanel implements MouseListener, MouseMotionListener 
     private double ax, ay, w, h;
     private boolean draggable = false;
 
-    public Tower() {
+    public Tower(int n) {
         boolean firstTime = true;
-        init(4);
+        init(n);
         addMouseListener(this);
         addMouseMotionListener(this);
     }

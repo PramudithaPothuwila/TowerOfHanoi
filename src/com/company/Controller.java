@@ -10,16 +10,43 @@ public class Controller
 {
     public TextField username;
     public Button play_btn;
+    public ToggleGroup level;
+    // number of Disc
+    private int nDisc;
+
+
+
 
     public void initialize()
     {
         play_btn.setDisable(true);
+
     }
+    // return number of Disc
+    private int numberOfDisc()
+    {
+//        RadioButton selectedRadioButton = (RadioButton) level.getSelectedToggle();
+//        String value = selectedRadioButton.getText();
+//        System.out.println(value);
+        if(this.level.getSelectedToggle().equals(this.expert))
+        {
+            nDisc=9;
+        }
+        if(this.level.getSelectedToggle().equals(this.intermediate))
+        {
+            nDisc=6;
+        }
+        else{
+            nDisc=4;
+        }
+        return nDisc;
+    }
+
     public void startGameHandler(ActionEvent event) {
         SwingUtilities.invokeLater(
                 () -> {
                     Game game = new Game("Tower Of Hanoi - Kanishka Hewageegana", username.getText());
-                    Game.t = new Tower();
+                    Game.t = new Tower(numberOfDisc());//number of Disks
                     Game.f.getContentPane().add(Game.t);
                 }
             );
@@ -63,6 +90,7 @@ public class Controller
 
     }
 
+<<<<<<< Updated upstream
     public void noviceButtonAction(ActionEvent event) {
         System.out.println("Novice CheckBox Button is pressed");
     }
@@ -78,4 +106,6 @@ public class Controller
     public void submit(ActionEvent event)
     {
     }
+=======
+>>>>>>> Stashed changes
 }

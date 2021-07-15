@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Button;
 
 import javax.swing.*;
 
@@ -13,14 +14,25 @@ public class Controller
     public RadioButton novice;
     public RadioButton intermediate;
     public RadioButton expert;
+    public Button play_btn;
 
+    public void initialize()
+    {
+        play_btn.setDisable(true);
+    }
     public void startGameHandler(ActionEvent event) {
         SwingUtilities.invokeLater(
                 () -> {
-                    Game game = new Game("Tower Of Hanoi - Kanishka Hewageegana",username.getText());
+                    Game game = new Game("Tower Of Hanoi - Kanishka Hewageegana", username.getText());
                     Game.t = new Tower();
                     Game.f.getContentPane().add(Game.t);
-                });
+                }
+            );
+    }
+    public void keyReleasedProperty(){
+        String userName = username.getText();
+        boolean isDisabled = (userName.isEmpty() || userName.trim().isEmpty());
+        play_btn.setDisable(isDisabled);
     }
 
     public void solveHandler(ActionEvent event)

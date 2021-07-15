@@ -1,7 +1,9 @@
 package com.company;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Button;
 
 import javax.swing.*;
@@ -9,6 +11,9 @@ import javax.swing.*;
 public class Controller
 {
     public TextField username;
+    public RadioButton novice;
+    public RadioButton intermediate;
+    public RadioButton expert;
     public Button play_btn;
     public ToggleGroup level;
     // number of Disc
@@ -57,8 +62,10 @@ public class Controller
         play_btn.setDisable(isDisabled);
     }
 
-    public void solveHandler(ActionEvent event) {
-        SwingUtilities.invokeLater(() -> {
+    public void solveHandler(ActionEvent event)
+    {
+        SwingUtilities.invokeLater(() ->
+        {
             try {
                 Solution.solve();
             } catch (InterruptedException e) {
@@ -90,22 +97,4 @@ public class Controller
 
     }
 
-<<<<<<< Updated upstream
-    public void noviceButtonAction(ActionEvent event) {
-        System.out.println("Novice CheckBox Button is pressed");
-    }
-
-    public void intermediateButtonAction(ActionEvent event) {
-        System.out.println("Intermediate CheckBox Button is pressed");
-    }
-
-    public void expertButtonAction(ActionEvent event) {
-        System.out.println("Expert CheckBox Button is pressed");
-    }
-
-    public void submit(ActionEvent event)
-    {
-    }
-=======
->>>>>>> Stashed changes
 }

@@ -26,26 +26,33 @@ public class Controller {
 
     // return number of Disc
     private int numberOfDisc() {
-//        RadioButton selectedRadioButton = (RadioButton) level.getSelectedToggle();
-//        String value = selectedRadioButton.getText();
-//        System.out.println(value);
-        if (this.level.getSelectedToggle().equals(this.expert)) {
-            nDisc = 9;
+        RadioButton selectedRadioButton = (RadioButton) level.getSelectedToggle();
+        String value = selectedRadioButton.getText();
+        System.out.println(value);
+        if(novice.isSelected())
+        {
+           return nDisc = 4;
         }
-        if (this.level.getSelectedToggle().equals(this.intermediate)) {
-            nDisc = 6;
-        } else {
-            nDisc = 4;
+        if(intermediate.isSelected())
+        {
+            return nDisc = 5;
         }
-        return nDisc;
+        if(expert.isSelected())
+        {
+            return nDisc = 7;
+        }else{
+            return nDisc=0;
+        }
+
     }
 
     public void startGameHandler(ActionEvent event) {
         SwingUtilities.invokeLater(
                 () -> {
                     Game game = new Game("Tower Of Hanoi - Kanishka Hewageegana", username.getText());
-                    Game.t = new Tower(numberOfDisc());//number of Disks
-                    Game.f.getContentPane().add(Game.t);
+                    game.t = new Tower(numberOfDisc());//number of Disks
+                    game.f.getContentPane().add(game.t);
+
                 }
         );
     }

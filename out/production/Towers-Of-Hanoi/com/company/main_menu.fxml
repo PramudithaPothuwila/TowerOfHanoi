@@ -90,7 +90,7 @@
                                         <Font name="Arial Black" size="19.0" />
                                     </font>
                                 </Label>
-                        <RadioButton fx:id="novice" layoutX="53.0" layoutY="115.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" selected="true" text="NOVICE">
+                        <RadioButton fx:id="novice" layoutX="53.0" layoutY="115.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0"  text="NOVICE" >
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

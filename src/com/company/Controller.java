@@ -10,11 +10,15 @@ import javax.swing.*;
 public class Controller
 {
     public TextField username;
-    public RadioButton novice;
-    public RadioButton intermediate;
-    public RadioButton expert;
+    public ToggleGroup level;
 
-    public void startGameHandler(ActionEvent event) {
+    public void initialize()
+    {
+
+    }
+
+    public void startGameHandler(ActionEvent event)
+    {
         SwingUtilities.invokeLater(
                 () -> {
                     Game game = new Game("Tower Of Hanoi - Kanishka Hewageegana",username.getText());
@@ -29,18 +33,21 @@ public class Controller
         {
             try {
                 Solution.solve();
-            } catch (InterruptedException e) {
-                e.printStackTrace(); // Traces the error
+            } catch (InterruptedException e)
+            {
+                e.printStackTrace();
             }
         });
     }
 
-    public void exitButtonAction(ActionEvent event) {
+    public void exitButtonAction(ActionEvent event)
+    {
         System.out.println("Exit Program.");
         System.exit(0);
     }
 
-    public void highScoreHandler(ActionEvent actionEvent) {
+    public void highScoreHandler(ActionEvent actionEvent)
+    {
         SwingUtilities.invokeLater(() -> {
             HighScores highScores = new HighScores();
             highScores.view();
@@ -55,16 +62,5 @@ public class Controller
 
             System.out.print(hm.getHighscoreString());
         });
-
     }
-
-    public void setToggleGroup()
-    {
-        ToggleGroup difficulty = new ToggleGroup();
-        novice.setToggleGroup(difficulty);
-        intermediate.setToggleGroup(difficulty);
-        expert.setToggleGroup(difficulty);
-        novice.setSelected(true);
-    }
-
 }

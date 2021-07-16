@@ -8,8 +8,8 @@ public class FileHandler
 
     private static FileOutputStream fileOutputStream = null;
     private static ObjectOutputStream objectOutputStream = null;
-    private String HIGHSCORE_FILE = "scores.dat";
-    private static ArrayList<Score> scores;
+    private static String HIGHSCORE_FILE = "scores.dat";
+    private static ArrayList<Score> scores = new ArrayList<>();
 
 
     public static ArrayList<Score> getScores()
@@ -19,44 +19,40 @@ public class FileHandler
 
     public static void insertNewScore(Score score)
     {
-        scores.add(score);
+        scores.add(scores.size(), score);
+        System.out.println(scores.get(scores.size() - 1).getName());
     }
 
-    public static void writeDatFile(String fileName) throws Exception
+    public static void writeToFile() throws FileNotFoundException
     {
         try
         {
-            fileOutputStream = new FileOutputStream(fileName);
-            objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            for (int i = 0; i < scores.size(); i++)
-            {
-                objectOutputStream.writeObject(scores.get(i));
-                objectOutputStream.flush();
-            }
+            FileOutputStream fileOutputStream = new FileOutputStream(HIGHSCORE_FILE);
+            ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
+            out.writeObject(scores);
+            out.close();
+            fileOutputStream.close();
         }
-        catch (Exception e)
+        catch (IOException e)
         {
-            System.out.println(e.getMessage());
-        }
-        finally
-        {
-            if (objectOutputStream != null)
-            {
-                objectOutputStream.close();
-            }
-            if (fileOutputStream != null)
-            {
-                fileOutputStream.close();
-            }
+            e.printStackTrace();
         }
     }
 
-    public void loadScoreFile()
+    public static void loadScoreFile()
     {
         try
         {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(HIGHSCORE_FILE));
-            scores = (ArrayList<Score>) inputStream.readObject();
+            Object object = inputStream.readObject();
+            System.out.println("before");
+            System.out.println(object);
+            System.out.println("After");
+            System.out.println(scores);
+            for (int i = 0; i < 10; i++)
+            {
+                System.out.println(object);
+            }
         }
         catch (FileNotFoundException e)
         {

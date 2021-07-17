@@ -90,7 +90,7 @@
                                         <Font name="Arial Black" size="19.0" />
                                     </font>
                                 </Label>
-                        <RadioButton layoutX="53.0" layoutY="115.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" selected="true" text="NOVICE">
+                        <RadioButton fx:id="novice" layoutX="53.0" layoutY="115.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0"  text="NOVICE" >
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -98,12 +98,12 @@
                               <ToggleGroup fx:id="level" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton layoutX="53.0" layoutY="146.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="139.0" text="INTERMEDIATE" toggleGroup="$level">
+                        <RadioButton fx:id="intermediate" layoutX="53.0" layoutY="146.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="139.0" text="INTERMEDIATE" toggleGroup="$level">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton layoutX="53.0" layoutY="174.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="84.0" text="EXPERT" toggleGroup="$level">
+                        <RadioButton fx:id="expert" layoutX="53.0" layoutY="174.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="84.0" text="EXPERT" toggleGroup="$level">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

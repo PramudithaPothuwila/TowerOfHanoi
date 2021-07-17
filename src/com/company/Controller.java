@@ -12,10 +12,6 @@ public class Controller
     public TextField username;
     public ToggleGroup level;
 
-    public void initialize()
-    {
-
-    }
 
     public void startGameHandler(ActionEvent event)
     {

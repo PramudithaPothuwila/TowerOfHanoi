@@ -43,11 +43,8 @@
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.HighScoreScreenController">
-  <children>
     <MenuBar VBox.vgrow="NEVER">
-      <menus>
         <Menu mnemonicParsing="false" text="File">
-          <items>
             <MenuItem mnemonicParsing="false" text="New" />
             <MenuItem mnemonicParsing="false" text="Open…" />
             <Menu mnemonicParsing="false" text="Open Recent" />
@@ -60,10 +57,8 @@
             <MenuItem mnemonicParsing="false" text="Preferences…" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
-          <items>
             <MenuItem mnemonicParsing="false" text="Undo" />
             <MenuItem mnemonicParsing="false" text="Redo" />
             <SeparatorMenuItem mnemonicParsing="false" />
@@ -74,127 +69,118 @@
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Select All" />
             <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
-          <items>
             <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
         </Menu>
-      </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: linear-gradient(to right bottom,#eb4524,#851b43);" VBox.vgrow="ALWAYS">
-      <children>
-            <Pane layoutX="30.0" layoutY="14.0" prefHeight="342.0" prefWidth="582.0" style="-fx-background-color: #ffffff; -fx-opacity: 0.8; -fx-background-radius: 20;">
-               <children>
-                  <Label layoutX="188.0" layoutY="31.0" text="High Scores">
-                     <font>
-                        <Font name="BadBlocks TT" size="35.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue1" layoutX="93.0" layoutY="100.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue2" layoutX="93.0" layoutY="138.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue3" layoutX="93.0" layoutY="175.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue4" layoutX="93.0" layoutY="216.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue5" layoutX="93.0" layoutY="256.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue6" layoutX="361.0" layoutY="97.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue7" layoutX="361.0" layoutY="135.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue8" layoutX="361.0" layoutY="172.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue9" layoutX="361.0" layoutY="213.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="highScoreValue10" layoutX="361.0" layoutY="253.0" text="Brown       20">
-                     <font>
-                        <Font name="Blockletter" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="67.0" layoutY="101.0" text="1.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="64.0" layoutY="140.0" text="2.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="64.0" layoutY="177.0" text="3.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="64.0" layoutY="218.0" text="4.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="64.0" layoutY="255.0" text="5.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="331.0" layoutY="99.0" text="6.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="331.0" layoutY="136.0" text="7.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="331.0" layoutY="174.0" text="8.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="331.0" layoutY="215.0" text="9.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="326.0" layoutY="255.0" text="10.">
-                     <font>
-                        <Font name="BadBlocks TT" size="26.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-      </children>
+    <AnchorPane style="-fx-background-color: linear-gradient(to right bottom,#eb4524,#851b43);" VBox.vgrow="ALWAYS">
+        <Pane layoutX="30.0" layoutY="14.0" prefHeight="342.0" prefWidth="582.0" style="-fx-background-color: #ffffff; -fx-opacity: 0.8; -fx-background-radius: 20;">
+            <Label layoutX="188.0" layoutY="31.0" text="High Scores">
+                <font>
+                    <Font name="BadBlocks TT" size="35.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue1" layoutX="93.0" layoutY="100.0">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue2" layoutX="93.0" layoutY="138.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue3" layoutX="93.0" layoutY="175.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue4" layoutX="93.0" layoutY="216.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue5" layoutX="93.0" layoutY="256.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue6" layoutX="361.0" layoutY="97.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue7" layoutX="361.0" layoutY="135.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue8" layoutX="361.0" layoutY="172.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue9" layoutX="361.0" layoutY="213.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="highScoreValue10" layoutX="361.0" layoutY="253.0" text="Brown       20">
+                <font>
+                    <Font name="Blockletter" size="20.0" />
+                </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="101.0" text="1.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="140.0" text="2.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="177.0" text="3.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="218.0" text="4.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="255.0" text="5.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="331.0" layoutY="99.0" text="6.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="331.0" layoutY="136.0" text="7.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="331.0" layoutY="174.0" text="8.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="331.0" layoutY="215.0" text="9.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+            <Label layoutX="326.0" layoutY="255.0" text="10.">
+                <font>
+                    <Font name="BadBlocks TT" size="26.0" />
+                </font>
+            </Label>
+        </Pane>
     </AnchorPane>
-  </children>
 </VBox>

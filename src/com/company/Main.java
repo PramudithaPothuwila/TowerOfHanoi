@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Main  extends Application
@@ -20,18 +19,10 @@ public class Main  extends Application
         stage.show();
     }
 
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)
     {
+        ScoreArray scoreArray = new ScoreArray();
+        ScoreArray.scoreFiller();
         launch(args);
-    }
-
-    public static void createDatFile()
-    {
-        for(int i = 0; i < 10;i++)
-        {
-            String name = "Test"+i;
-            Score score = new Score(name, i);
-            FileHandler.insertNewScore(score);
-        }
     }
 }

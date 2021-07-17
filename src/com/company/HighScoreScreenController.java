@@ -1,32 +1,23 @@
 package com.company;
 
-import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class HighScoreScreenController
 {
-    @FXML
-    private Label highScoreValue1;
-    @FXML
-    private Label highScoreValue2;
-    @FXML
-    private Label highScoreValue3;
-    @FXML
-    private Label highScoreValue4;
-    @FXML
-    private Label highScoreValue5;
-    @FXML
-    private Label highScoreValue6;
-    @FXML
-    private Label highScoreValue7;
-    @FXML
-    private Label highScoreValue8;
-    @FXML
-    private Label highScoreValue9;
-    @FXML
-    private Label highScoreValue10;
+    public Label highScoreValue1 = new Label();
+    public Label highScoreValue2 = new Label();
+    public Label highScoreValue3 = new Label();
+    public Label highScoreValue4 = new Label();
+    public Label highScoreValue5 = new Label();
+    public Label highScoreValue6 = new Label();
+    public Label highScoreValue7 = new Label();
+    public Label highScoreValue8 = new Label();
+    public Label highScoreValue9 = new Label();
+    public Label highScoreValue10 = new Label();
     Label[] labels = {highScoreValue1, highScoreValue2, highScoreValue3, highScoreValue4, highScoreValue5, highScoreValue6, highScoreValue7, highScoreValue8, highScoreValue9, highScoreValue10};
 
 
@@ -37,8 +28,7 @@ public class HighScoreScreenController
 
     public void setScores()
     {
-        FileHandler.loadScoreFile();
-        ArrayList<Score> scoreList = FileHandler.getScores();
+        List<Score> scoreList = ScoreArray.getScoreList();
         String[] names = new String[10];
         int[] scores = new int[10];
 
@@ -46,23 +36,8 @@ public class HighScoreScreenController
         {
             names[i] = scoreList.get(i).getName();
             scores[i] = scoreList.get(i).getScore();
+            String temp = names[i]+ " - " + scores[i];
+            labels[i].setText(temp);
         }
-        int n = scores.length;
-        for (int i = 0; i < n-1; i++)
-            for (int j = 0; j < n-i-1; j++)
-                if (scores[j] > scores[j+1])
-                {
-                    int tempScore = scores[j];
-                    scores[j] = scores[j+1];
-                    scores[j+1] = tempScore;
-                    String tempName = names[j];
-                    names[j] = names[j+1];
-                    names[j+1] = tempName;
-                }
-        for(int i = 0; i < 10; i++)
-        {
-            labels[i].setText(names[i]+ " - " + scores[i]);
-        }
-
     }
 }

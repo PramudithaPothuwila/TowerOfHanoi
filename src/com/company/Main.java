@@ -13,7 +13,7 @@ public class Main  extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("highScoreScreen.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("main_menu.fxml")));
         stage.setTitle("Kanishka Hewageegana");
         stage.setScene(new Scene(root, 600, 390));
         stage.show();

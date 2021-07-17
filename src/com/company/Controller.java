@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.clock.doCountDown;
 import javafx.event.ActionEvent;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -52,6 +53,7 @@ public class Controller {
                     Game game = new Game("Tower Of Hanoi - Kanishka Hewageegana", username.getText());
                     game.t = new Tower(numberOfDisc());//number of Disks
                     game.f.getContentPane().add(game.t);
+                    doCountDown d = new doCountDown();
 
                 }
         );

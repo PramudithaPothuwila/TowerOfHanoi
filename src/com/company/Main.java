@@ -8,18 +8,21 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-public class Main extends Application
+public class Main  extends Application
 {
     @Override
     public void start(Stage stage) throws Exception
     {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("main_menu.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("highScoreScreen.fxml")));
         stage.setTitle("Kanishka Hewageegana");
         stage.setScene(new Scene(root, 600, 390));
         stage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        new ScoreArray();
+        ScoreArray.scoreFiller();
         launch(args);
     }
 }

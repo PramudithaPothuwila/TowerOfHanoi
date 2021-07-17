@@ -6,7 +6,8 @@ import java.util.Comparator;
 import java.util.*;
 import java.io.*;
 
-public class HighScores extends JPanel {
+public class HighScores extends JPanel
+{
     public void view() {
         JFrame jFrame = new JFrame();
         jFrame.setTitle("High Scores");

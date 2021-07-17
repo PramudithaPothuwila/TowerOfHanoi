@@ -3,7 +3,8 @@ package com.company;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class TimeScoreAlgo {
+public class TimeScoreAlgo
+{
     private int k;
     private Timer t;
     private int score=100;

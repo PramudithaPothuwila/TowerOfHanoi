@@ -3,7 +3,8 @@ package com.company;
 import javax.swing.*;
 import java.awt.*;
 
-public class Solution extends JPanel {
+public class Solution extends JPanel
+{
 
     static int[][] tower; // the three towers' disks as stack
     static int[] top;//top of the three stacks

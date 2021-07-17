@@ -21,7 +21,7 @@ public class Main  extends Application
 
     public static void main(String[] args)
     {
-        ScoreArray scoreArray = new ScoreArray();
+        new ScoreArray();
         ScoreArray.scoreFiller();
         launch(args);
     }
